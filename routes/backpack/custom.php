@@ -19,4 +19,11 @@ Route::group([
     Route::crud('division', 'DivisionCrudController');
     Route::crud('district', 'DistrictCrudController');
     Route::crud('upazila', 'UpazilaCrudController');
+    Route::crud('occupation', 'OccupationCrudController');
+    Route::crud('marital-status', 'MaritalStatusCrudController');
+    Route::crud('member', 'MemberCrudController');
+    Route::crud('phase', 'PhaseCrudController');
+    Route::crud('road', 'RoadCrudController');
+    Route::crud('mouza', 'MouzaCrudController');
+    Route::crud('plot', 'PlotCrudController');
 }); // this should be the absolute last line of this file

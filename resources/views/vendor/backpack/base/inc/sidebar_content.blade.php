@@ -25,7 +25,6 @@
         <li class="nav-item"><a class="nav-link" href="{{ backpack_url('occupation') }}"><i class="nav-icon la la-address-book-o"></i> Occupations</a></li>
         <li class="nav-item"><a class="nav-link" href="{{ backpack_url('marital-status') }}"><i class="nav-icon la la-h-square"></i> Marital statuses</a></li>
         <li class="nav-item"><a class="nav-link" href="{{ backpack_url('phase') }}"><i class="nav-icon la la-address-book"></i> Phases</a></li>
-        <li class="nav-item"><a class="nav-link" href="{{ backpack_url('road') }}"><i class="nav-icon la la-square"></i> Roads</a></li>
         <li class="nav-item"><a class="nav-link" href="{{ backpack_url('mouza') }}"><i class="nav-icon la la-search"></i> Mouzas</a></li>
     </ul>
 </li>
@@ -33,3 +32,5 @@
 <li class="nav-item"><a class="nav-link" href="{{ backpack_url('member') }}"><i class="nav-icon la la-people-carry"></i> Members</a></li>
 
 <li class="nav-item"><a class="nav-link" href="{{ backpack_url('plot') }}"><i class="nav-icon la la-landmark"></i> Plots</a></li>
+
+<li class="nav-item"><a class="nav-link" href="{{ backpack_url('road') }}"><i class="nav-icon la la-landmark"></i> Roads</a></li>

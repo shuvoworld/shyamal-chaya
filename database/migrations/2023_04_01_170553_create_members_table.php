@@ -22,9 +22,9 @@ return new class extends Migration
             $table->text('present_address')->nullable();
             $table->string('mobile', 20)->nullable();
             $table->string('phone', 20)->nullable();
-            $table->integer('national_id')->nullable();
+            $table->bigInteger('national_id')->nullable();
             $table->foreignId('occupation_id')->nullable()->constrained();
-            $table->foreignId('marital_status')->constrained('marital_statuses');
+            $table->foreignId('marital_status')->nullable()->constrained('marital_statuses');
             $table->timestamps();
         });
 

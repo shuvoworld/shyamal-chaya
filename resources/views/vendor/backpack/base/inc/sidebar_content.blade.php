@@ -33,3 +33,5 @@
 <li class="nav-item"><a class="nav-link" href="{{ backpack_url('member') }}"><i class="nav-icon la la-people-carry"></i> Members</a></li>
 
 <li class="nav-item"><a class="nav-link" href="{{ backpack_url('plot') }}"><i class="nav-icon la la-landmark"></i> Plots</a></li>
+
+<li class="nav-item"><a class="nav-link" href="{{ backpack_url('plot-assign') }}"><i class="nav-icon la la-question"></i> Plot assigns</a></li>

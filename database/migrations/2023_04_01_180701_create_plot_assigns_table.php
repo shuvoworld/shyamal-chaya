@@ -13,10 +13,10 @@ return new class extends Migration
     {
         Schema::disableForeignKeyConstraints();
 
-        Schema::create('roads', function (Blueprint $table) {
+        Schema::create('plot_assigns', function (Blueprint $table) {
             $table->id();
-            $table->string('name', 20);
-            $table->foreignId('phase_no')->nullable()->constrained('phases');
+            $table->foreignId('occupation_id')->nullable()->constrained();
+            $table->foreignId('marital_status_id')->nullable()->constrained();
             $table->timestamps();
         });
 
@@ -28,6 +28,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('roads');
+        Schema::dropIfExists('plot_assigns');
     }
 };

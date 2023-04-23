@@ -26,4 +26,5 @@ Route::group([
     Route::crud('road', 'RoadCrudController');
     Route::crud('mouza', 'MouzaCrudController');
     Route::crud('plot', 'PlotCrudController');
+    Route::crud('plot-assign', 'PlotAssignCrudController');
 }); // this should be the absolute last line of this file

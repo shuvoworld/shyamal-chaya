@@ -22,7 +22,7 @@ return new class extends Migration
             $table->string('khatian_no', 50);
             $table->float('quantity_of_land_katha');
             $table->float('total_land_katha');
-            $table->foreignId('member_id')->nullable()->constrained();
+            $table->foreignId('member_id')->nullable()->nullable()->constrained();
             $table->timestamps();
         });
 

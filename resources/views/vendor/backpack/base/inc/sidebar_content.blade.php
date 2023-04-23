@@ -31,6 +31,6 @@
 
 <li class="nav-item"><a class="nav-link" href="{{ backpack_url('member') }}"><i class="nav-icon la la-people-carry"></i> Members</a></li>
 
-<li class="nav-item"><a class="nav-link" href="{{ backpack_url('plot') }}"><i class="nav-icon la la-landmark"></i> Plots</a></li>
+<li class="nav-item"><a class="nav-link" href="{{ backpack_url('road') }}"><i class="nav-icon la la-directions"></i> Roads</a></li>
 
-<li class="nav-item"><a class="nav-link" href="{{ backpack_url('road') }}"><i class="nav-icon la la-landmark"></i> Roads</a></li>
+<li class="nav-item"><a class="nav-link" href="{{ backpack_url('plot-allocation') }}"><i class="nav-icon la la-landmark"></i> Plot allocations</a></li>

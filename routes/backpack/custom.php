@@ -24,6 +24,6 @@ Route::group([
     Route::crud('member', 'MemberCrudController');
     Route::crud('phase', 'PhaseCrudController');
     Route::crud('mouza', 'MouzaCrudController');
-    Route::crud('plot', 'PlotCrudController');
     Route::crud('road', 'RoadCrudController');
+    Route::crud('plot-allocation', 'PlotAllocationCrudController');
 }); // this should be the absolute last line of this file

@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
-class Plot extends Model
+class PlotAllocation extends Model
 {
     use CrudTrait;
     use HasFactory;
@@ -18,13 +18,13 @@ class Plot extends Model
      * @var array
      */
     protected $fillable = [
-        'road_no',
+        'road_id',
         'plot_no',
-        'mouza_no',
         'plot_no_rs',
+        'mouza_id',
         'khatian_no',
-        'quantity_of_land_katha',
-        'total_land_katha',
+        'quantity_of_land_in_katha',
+        'total_land_in_katha',
         'member_id',
     ];
 
@@ -35,19 +35,19 @@ class Plot extends Model
      */
     protected $casts = [
         'id' => 'integer',
-        'road_no' => 'integer',
-        'mouza_no' => 'integer',
-        'quantity_of_land_katha' => 'float',
-        'total_land_katha' => 'float',
+        'road_id' => 'integer',
+        'mouza_id' => 'integer',
+        'quantity_of_land_in_katha' => 'float',
+        'total_land_in_katha' => 'float',
         'member_id' => 'integer',
     ];
 
-    public function roadNo(): BelongsTo
+    public function road(): BelongsTo
     {
         return $this->belongsTo(Road::class);
     }
 
-    public function mouzaNo(): BelongsTo
+    public function mouza(): BelongsTo
     {
         return $this->belongsTo(Mouza::class);
     }

@@ -4,7 +4,7 @@ namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class PlotRequest extends FormRequest
+class PlotAllocationRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -25,13 +25,13 @@ class PlotRequest extends FormRequest
     public function rules()
     {
         return [
-            'road_no' => 'required|integer|exists:roads,id',
-            'plot_no' => 'required|integer',
-            'mouza_no' => 'required|integer|exists:mouzas,id',
-            'plot_no_rs' => 'required|integer',
-            'khatian_no' => 'required|string|max:50',
-            'quantityOfLandKatha' => 'required|numeric',
-            'totalLandKatha' => 'required|numeric',
+            'road' => 'nullable|nullable|integer|exists:roads,id',
+            'plot_no' => 'nullable|nullable|integer',
+            'plot_no_rs' => 'nullable|nullable|integer',
+            'mouza' => 'nullable|nullable|integer|exists:mouzas,id',
+            'khatian_no' => 'nullable|nullable|string|max:50',
+            'quantity_of_land_in_katha' => 'nullable|nullable|numeric',
+            'total_land_in_katha' => 'nullable|nullable|numeric',
             'member' => 'nullable|nullable|integer|exists:members,id',
         ];
     }

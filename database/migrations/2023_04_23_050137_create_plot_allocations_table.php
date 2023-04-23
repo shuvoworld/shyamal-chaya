@@ -13,15 +13,15 @@ return new class extends Migration
     {
         Schema::disableForeignKeyConstraints();
 
-        Schema::create('plots', function (Blueprint $table) {
+        Schema::create('plot_allocations', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('road_no')->constrained('roads');
-            $table->integer('plot_no');
-            $table->foreignId('mouza_no')->constrained('mouzas');
-            $table->integer('plot_no_rs');
-            $table->string('khatian_no', 50);
-            $table->float('quantity_of_land_katha');
-            $table->float('total_land_katha');
+            $table->foreignId('road_id')->nullable()->constrained();
+            $table->integer('plot_no')->nullable();
+            $table->integer('plot_no_rs')->nullable();
+            $table->foreignId('mouza_id')->nullable()->constrained();
+            $table->string('khatian_no', 50)->nullable();
+            $table->float('quantity_of_land_in_katha')->nullable();
+            $table->float('total_land_in_katha')->nullable();
             $table->foreignId('member_id')->nullable()->constrained();
             $table->timestamps();
         });
@@ -34,6 +34,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('plots');
+        Schema::dropIfExists('plot_allocations');
     }
 };

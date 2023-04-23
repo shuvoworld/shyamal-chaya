@@ -23,8 +23,7 @@ Route::group([
     Route::crud('marital-status', 'MaritalStatusCrudController');
     Route::crud('member', 'MemberCrudController');
     Route::crud('phase', 'PhaseCrudController');
-    Route::crud('road', 'RoadCrudController');
     Route::crud('mouza', 'MouzaCrudController');
-    Route::crud('plot', 'PlotCrudController');
-    Route::crud('plot-assign', 'PlotAssignCrudController');
+    Route::crud('road', 'RoadCrudController');
+    Route::crud('plot-allocation', 'PlotAllocationCrudController');
 }); // this should be the absolute last line of this file

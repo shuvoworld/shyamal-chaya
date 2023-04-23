@@ -19,7 +19,7 @@ class Road extends Model
      */
     protected $fillable = [
         'name',
-        'phase_no',
+        'phase_id',
     ];
 
     /**
@@ -29,10 +29,10 @@ class Road extends Model
      */
     protected $casts = [
         'id' => 'integer',
-        'phase_no' => 'integer',
+        'phase_id' => 'integer',
     ];
 
-    public function phaseNo(): BelongsTo
+    public function phase(): BelongsTo
     {
         return $this->belongsTo(Phase::class);
     }

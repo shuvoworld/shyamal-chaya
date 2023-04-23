@@ -2,16 +2,16 @@
 
 namespace App\Http\Controllers\Admin;
 
-use App\Http\Requests\PlotRequest;
+use App\Http\Requests\PlotAllocationRequest;
 use Backpack\CRUD\app\Http\Controllers\CrudController;
 use Backpack\CRUD\app\Library\CrudPanel\CrudPanelFacade as CRUD;
 
 /**
- * Class PlotCrudController
+ * Class PlotAllocationCrudController
  * @package App\Http\Controllers\Admin
  * @property-read \Backpack\CRUD\app\Library\CrudPanel\CrudPanel $crud
  */
-class PlotCrudController extends CrudController
+class PlotAllocationCrudController extends CrudController
 {
     use \Backpack\CRUD\app\Http\Controllers\Operations\ListOperation;
     use \Backpack\CRUD\app\Http\Controllers\Operations\CreateOperation;
@@ -26,9 +26,9 @@ class PlotCrudController extends CrudController
      */
     public function setup()
     {
-        CRUD::setModel(\App\Models\Plot::class);
-        CRUD::setRoute(config('backpack.base.route_prefix') . '/plot');
-        CRUD::setEntityNameStrings('plot', 'plots');
+        CRUD::setModel(\App\Models\PlotAllocation::class);
+        CRUD::setRoute(config('backpack.base.route_prefix') . '/plot-allocation');
+        CRUD::setEntityNameStrings('plot allocation', 'plot allocations');
     }
 
     /**
@@ -39,13 +39,13 @@ class PlotCrudController extends CrudController
      */
     protected function setupListOperation()
     {
-        CRUD::column('road_no');
+        CRUD::column('road');
         CRUD::column('plot_no');
-        CRUD::column('mouza_no');
         CRUD::column('plot_no_rs');
+        CRUD::column('mouza');
         CRUD::column('khatian_no');
-        CRUD::column('quantityOfLandKatha');
-        CRUD::column('totalLandKatha');
+        CRUD::column('quantity_of_land_in_katha');
+        CRUD::column('total_land_in_katha');
         CRUD::column('member');
 
         /**
@@ -63,15 +63,15 @@ class PlotCrudController extends CrudController
      */
     protected function setupCreateOperation()
     {
-        CRUD::setValidation(PlotRequest::class);
+        CRUD::setValidation(PlotAllocationRequest::class);
 
-        CRUD::field('road_no');
+        CRUD::field('road');
         CRUD::field('plot_no');
-        CRUD::field('mouza_no');
         CRUD::field('plot_no_rs');
+        CRUD::field('mouza');
         CRUD::field('khatian_no');
-        CRUD::field('quantityOfLandKatha');
-        CRUD::field('totalLandKatha');
+        CRUD::field('quantity_of_land_in_katha');
+        CRUD::field('total_land_in_katha');
         CRUD::field('member');
 
         /**

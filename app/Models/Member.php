@@ -48,6 +48,6 @@ class Member extends Model
 
     public function maritalStatus(): BelongsTo
     {
-        return $this->belongsTo(MaritalStatus::class);
+        return $this->belongsTo(MaritalStatus::class, 'marital_status');
     }
 }

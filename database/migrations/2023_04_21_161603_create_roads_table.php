@@ -15,8 +15,8 @@ return new class extends Migration
 
         Schema::create('roads', function (Blueprint $table) {
             $table->id();
-            $table->string('name', 20);
-            $table->foreignId('phase_no')->nullable()->constrained('phases');
+            $table->string('name')->nullable();
+            $table->foreignId('phase_id')->nullable()->constrained('phases');
             $table->timestamps();
         });
 

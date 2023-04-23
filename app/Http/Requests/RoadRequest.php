@@ -25,8 +25,7 @@ class RoadRequest extends FormRequest
     public function rules()
     {
         return [
-            'name' => 'required|string|max:20',
-            'phaseNo' => 'required|integer|exists:phases,id',
+            'phase' => 'nullable|string',
         ];
     }
 

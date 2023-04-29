@@ -26,8 +26,8 @@ class MemberRequest extends FormRequest
     {
         return [
             'name' => 'required|string|max:255',
-            'father_name' => 'nullable|nullable|string|max:255',
             'mother_name' => 'nullable|nullable|string|max:255',
+            'father_name' => 'nullable|nullable|string|max:255',
             'permanent_address' => 'nullable|nullable|string',
             'present_address' => 'nullable|nullable|string',
             'mobile' => 'nullable|nullable|string|max:20',

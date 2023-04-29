@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
-class Road extends Model
+class FamilyMember extends Model
 {
     use CrudTrait;
     use HasFactory;
@@ -19,8 +19,9 @@ class Road extends Model
      */
     protected $fillable = [
         'name',
-        'phase_id',
-        'block_id'
+        'relationship',
+        'national_id',
+        'member_id',
     ];
 
     /**
@@ -30,11 +31,11 @@ class Road extends Model
      */
     protected $casts = [
         'id' => 'integer',
-        'phase_id' => 'integer',
+        'member_id' => 'integer',
     ];
 
-    public function phase(): BelongsTo
+    public function member(): BelongsTo
     {
-        return $this->belongsTo(Phase::class);
+        return $this->belongsTo(Member::class);
     }
 }

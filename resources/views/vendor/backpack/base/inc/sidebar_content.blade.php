@@ -34,3 +34,6 @@
 <li class="nav-item"><a class="nav-link" href="{{ backpack_url('road') }}"><i class="nav-icon la la-directions"></i> Roads</a></li>
 
 <li class="nav-item"><a class="nav-link" href="{{ backpack_url('plot-allocation') }}"><i class="nav-icon la la-landmark"></i> Plot allocations</a></li>
+
+<li class="nav-item"><a class="nav-link" href="{{ backpack_url('block') }}"><i class="nav-icon la la-question"></i> Blocks</a></li>
+<li class="nav-item"><a class="nav-link" href="{{ backpack_url('family-member') }}"><i class="nav-icon la la-question"></i> Family members</a></li>

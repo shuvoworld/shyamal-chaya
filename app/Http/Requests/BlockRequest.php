@@ -4,7 +4,7 @@ namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class RoadRequest extends FormRequest
+class BlockRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -25,8 +25,7 @@ class RoadRequest extends FormRequest
     public function rules()
     {
         return [
-            'phase' => 'nullable|string',
-            'block' => 'nullable|string',
+            'name' => 'required|string|max:50',
         ];
     }
 

@@ -21,7 +21,7 @@ class MemberCrudController extends CrudController
 
     /**
      * Configure the CrudPanel object. Apply settings to all operations.
-     * 
+     *
      * @return void
      */
     public function setup()
@@ -33,15 +33,15 @@ class MemberCrudController extends CrudController
 
     /**
      * Define what happens when the List operation is loaded.
-     * 
+     *
      * @see  https://backpackforlaravel.com/docs/crud-operation-list-entries
      * @return void
      */
     protected function setupListOperation()
     {
         CRUD::column('name');
-        CRUD::column('father_name');
         CRUD::column('mother_name');
+        CRUD::column('father_name');
         CRUD::column('permanent_address');
         CRUD::column('present_address');
         CRUD::column('mobile');
@@ -53,13 +53,13 @@ class MemberCrudController extends CrudController
         /**
          * Columns can be defined using the fluent syntax or array syntax:
          * - CRUD::column('price')->type('number');
-         * - CRUD::addColumn(['name' => 'price', 'type' => 'number']); 
+         * - CRUD::addColumn(['name' => 'price', 'type' => 'number']);
          */
     }
 
     /**
      * Define what happens when the Create operation is loaded.
-     * 
+     *
      * @see https://backpackforlaravel.com/docs/crud-operation-create
      * @return void
      */
@@ -77,17 +77,48 @@ class MemberCrudController extends CrudController
         CRUD::field('national_id');
         CRUD::field('occupation');
         CRUD::field('maritalStatus');
+        CRUD::addField(
+            [
+                'name'          => 'familyMembers',
+                'type'          => "relationship",
+                'subfields'   => [
+                    [
+                        'name' => 'name',
+                        'type' => 'text',
+                        'wrapper' => [
+                            'class' => 'form-group col-md-4',
+                        ],
+                    ],
+                    [
+                        'name' => 'relationship',
+                        'type'        => 'select_from_array',
+                        'options'     => ['Spouse' => 'Spouse', 'Son' => 'Son', 'Daughter'=>'Daughter'],
+                        'wrapper' => [
+                            'class' => 'form-group col-md-3',
+                        ],
+                    ],
+                    [
+                        'name' => 'national_id',
+                        'label' => 'National ID',
+                        'type' => 'text',
+                        'wrapper' => [
+                            'class' => 'form-group col-md-3',
+                        ],
+                    ],
+                ],
+            ]
+        );
 
         /**
          * Fields can be defined using the fluent syntax or array syntax:
          * - CRUD::field('price')->type('number');
-         * - CRUD::addField(['name' => 'price', 'type' => 'number'])); 
+         * - CRUD::addField(['name' => 'price', 'type' => 'number']));
          */
     }
 
     /**
      * Define what happens when the Update operation is loaded.
-     * 
+     *
      * @see https://backpackforlaravel.com/docs/crud-operation-update
      * @return void
      */

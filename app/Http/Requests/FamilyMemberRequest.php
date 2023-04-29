@@ -4,7 +4,7 @@ namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class RoadRequest extends FormRequest
+class FamilyMemberRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -25,8 +25,10 @@ class RoadRequest extends FormRequest
     public function rules()
     {
         return [
-            'phase' => 'nullable|string',
-            'block' => 'nullable|string',
+            'name' => 'nullable|nullable|string|max:100',
+            'relationship' => 'nullable|nullable|string|max:20',
+            'national_id' => 'nullable|nullable|integer',
+            'member' => 'nullable|nullable|integer|exists:members,id',
         ];
     }
 

@@ -5,9 +5,8 @@ namespace App\Models;
 use Backpack\CRUD\app\Models\Traits\CrudTrait;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
-class Road extends Model
+class Block extends Model
 {
     use CrudTrait;
     use HasFactory;
@@ -19,8 +18,6 @@ class Road extends Model
      */
     protected $fillable = [
         'name',
-        'phase_id',
-        'block_id'
     ];
 
     /**
@@ -30,11 +27,5 @@ class Road extends Model
      */
     protected $casts = [
         'id' => 'integer',
-        'phase_id' => 'integer',
     ];
-
-    public function phase(): BelongsTo
-    {
-        return $this->belongsTo(Phase::class);
-    }
 }

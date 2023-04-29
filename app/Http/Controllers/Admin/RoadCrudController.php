@@ -40,17 +40,8 @@ class RoadCrudController extends CrudController
     protected function setupListOperation()
     {
         CRUD::column('name');
-        CRUD::addColumn(
-            [
-                'name' => 'phase_id',
-                'type' => 'select',
-                'model'     => "App\Models\Phase", // related model
-                'attribute' => 'name', // foreign key attribute that is shown to user
-
-
-            ]
-        );
-
+        CRUD::column('phase_id');
+        CRUD::column('block_id');
         /**
          * Columns can be defined using the fluent syntax or array syntax:
          * - CRUD::column('price')->type('number');
@@ -74,6 +65,17 @@ class RoadCrudController extends CrudController
                 'name' => 'phase_id',
                 'type' => 'select',
                 'model'     => "App\Models\Phase", // related model
+                'attribute' => 'name', // foreign key attribute that is shown to user
+
+
+            ]
+        );
+
+        CRUD::addField(
+            [
+                'name' => 'block_id',
+                'type' => 'select',
+                'model'     => "App\Models\Block", // related model
                 'attribute' => 'name', // foreign key attribute that is shown to user
 
 

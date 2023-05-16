@@ -35,5 +35,6 @@
 
 <li class="nav-item"><a class="nav-link" href="{{ backpack_url('plot-allocation') }}"><i class="nav-icon la la-landmark"></i> Plot allocations</a></li>
 
-<li class="nav-item"><a class="nav-link" href="{{ backpack_url('block') }}"><i class="nav-icon la la-question"></i> Blocks</a></li>
-<li class="nav-item"><a class="nav-link" href="{{ backpack_url('family-member') }}"><i class="nav-icon la la-question"></i> Family members</a></li>
+<li class="nav-item"><a class="nav-link" href="{{ backpack_url('block') }}"><i class="nav-icon la la-landmark"></i> Blocks</a></li>
+<li class="nav-item"><a class="nav-link" href="{{ backpack_url('family-member') }}"><i class="nav-icon la la-people-carry"></i> Family members</a></li>
+<li class="nav-item"><a class="nav-link btn btn-primary" href="{{ backpack_url('logout') }}"> Log Out</a>

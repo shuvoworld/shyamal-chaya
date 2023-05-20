@@ -26,6 +26,7 @@
         <li class="nav-item"><a class="nav-link" href="{{ backpack_url('marital-status') }}"><i class="nav-icon la la-h-square"></i> Marital statuses</a></li>
         <li class="nav-item"><a class="nav-link" href="{{ backpack_url('phase') }}"><i class="nav-icon la la-address-book"></i> Phases</a></li>
         <li class="nav-item"><a class="nav-link" href="{{ backpack_url('mouza') }}"><i class="nav-icon la la-search"></i> Mouzas</a></li>
+        <li class="nav-item"><a class="nav-link" href="{{ backpack_url('fees-type') }}"><i class="nav-icon la la-question"></i> Payment types</a></li>
     </ul>
 </li>
 
@@ -37,4 +38,7 @@
 
 <li class="nav-item"><a class="nav-link" href="{{ backpack_url('block') }}"><i class="nav-icon la la-landmark"></i> Blocks</a></li>
 <li class="nav-item"><a class="nav-link" href="{{ backpack_url('family-member') }}"><i class="nav-icon la la-people-carry"></i> Family members</a></li>
+
+<li class="nav-item"><a class="nav-link" href="{{ backpack_url('fee') }}"><i class="nav-icon la la-money"></i> Payment Information</a></li>
+
 <li class="nav-item"><a class="nav-link btn btn-primary" href="{{ backpack_url('logout') }}"> Log Out</a>

@@ -28,4 +28,6 @@ Route::group([
     Route::crud('plot-allocation', 'PlotAllocationCrudController');
     Route::crud('block', 'BlockCrudController');
     Route::crud('family-member', 'FamilyMemberCrudController');
+    Route::crud('fees-type', 'FeesTypeCrudController');
+    Route::crud('fee', 'FeeCrudController');
 }); // this should be the absolute last line of this file

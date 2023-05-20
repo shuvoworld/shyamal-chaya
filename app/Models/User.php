@@ -17,7 +17,7 @@ class User extends Authenticatable
     use CrudTrait;
     use HasRoles;
 
-    /**
+    /**```````` ``
      * The attributes that are mass assignable.
      *
      * @var array<int, string>

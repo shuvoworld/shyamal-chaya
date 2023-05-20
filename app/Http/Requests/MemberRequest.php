@@ -25,15 +25,16 @@ class MemberRequest extends FormRequest
     public function rules()
     {
         return [
+            'membership_no' => 'nullable|string|max:20',
             'name' => 'required|string|max:255',
-            'mother_name' => 'nullable|nullable|string|max:255',
-            'father_name' => 'nullable|nullable|string|max:255',
-            'permanent_address' => 'nullable|nullable|string',
-            'present_address' => 'nullable|nullable|string',
-            'mobile' => 'nullable|nullable|string|max:20',
-            'phone' => 'nullable|nullable|string|max:20',
+            'mother_name' => 'nullable|string|max:255',
+            'father_name' => 'nullable|string|max:255',
+            'permanent_address' => 'nullable|string',
+            'present_address' => 'nullable|string',
+            'mobile' => 'nullable|string|max:20',
+            'phone' => 'nullable|string|max:20',
             'national_id' => 'nullable|nullable|integer',
-            'occupation' => 'nullable|nullable|integer|exists:occupations,id',
+            'occupation' => 'nullable|integer|exists:occupations,id',
             'maritalStatus' => 'required|integer|exists:marital_statuses,id',
         ];
     }

@@ -46,14 +46,14 @@
                     'type' => 'card',
                     'class'  => 'card text-white bg-info',
                     'content' => [
-                    'body' => '<h5>Payment Information</h5><br/><a href="'.backpack_url('fees').'" class="btn btn-warning">See Details</a>'
+                    'body' => '<h5>Payment Information</h5><br/><a href="'.backpack_url('fee').'" class="btn btn-warning">See Details</a>'
                     ]
                 ],
                 [
                     'type' => 'card',
                     'class'  => 'card text-white bg-warning',
                     'content' => [
-                    'body' => '<h5>Road Wise Information</h5><br/><a href="'.backpack_url('roads').'" class="btn btn-success">See Details</a>'
+                    'body' => '<h5>Road Wise Information</h5><br/><a href="'.backpack_url('road').'" class="btn btn-success">See Details</a>'
                     ]
                 ]
             ],

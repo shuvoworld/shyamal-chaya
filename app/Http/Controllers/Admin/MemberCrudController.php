@@ -29,6 +29,16 @@ class MemberCrudController extends CrudController
         CRUD::setModel(\App\Models\Member::class);
         CRUD::setRoute(config('backpack.base.route_prefix') . '/member');
         CRUD::setEntityNameStrings('member', 'members');
+        
+        // Check permission whether this logged in user can do specific action on this module
+        if(backpack_user()->can('list member'))
+            CRUD::allowAccess(['index']);
+        if (backpack_user()->can('create member'))
+            CRUD::allowAccess(['create']);
+        if (backpack_user()->can('edit member'))
+            CRUD::allowAccess(['update']);
+        if (backpack_user()->can('delete member'))
+            CRUD::allowAccess(['delete']);
     }
 
     /**

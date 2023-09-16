@@ -31,14 +31,14 @@ class MemberCrudController extends CrudController
         CRUD::setEntityNameStrings('member', 'members');
         
         // Check permission whether this logged in user can do specific action on this module
-        if(backpack_user()->can('list member'))
-            CRUD::allowAccess(['index']);
-        if (backpack_user()->can('create member'))
-            CRUD::allowAccess(['create']);
-        if (backpack_user()->can('edit member'))
-            CRUD::allowAccess(['update']);
-        if (backpack_user()->can('delete member'))
-            CRUD::allowAccess(['delete']);
+        if(backpack_user()->cannot('list member'))
+            CRUD::denyAccess(['index']);
+        if (backpack_user()->cannot('create member'))
+            CRUD::denyAccess(['create']);
+        if (backpack_user()->cannot('edit member'))
+            CRUD::denyAccess(['update']);
+        if (backpack_user()->cannot('delete member'))
+            CRUD::denyAccess(['delete']);
     }
 
     /**

@@ -39,6 +39,7 @@ class UpazilaCrudController extends CrudController
      */
     protected function setupListOperation()
     {
+        CRUD::enableExportButtons();
         CRUD::column('name_en');
         CRUD::column('name_bn');
         CRUD::column('code');

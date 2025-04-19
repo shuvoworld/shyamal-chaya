@@ -29,9 +29,9 @@ class MemberCrudController extends CrudController
         CRUD::setModel(\App\Models\Member::class);
         CRUD::setRoute(config('backpack.base.route_prefix') . '/member');
         CRUD::setEntityNameStrings('member', 'members');
-        
+
         // Check permission whether this logged in user can do specific action on this module
-        if(backpack_user()->cannot('list member'))
+        if (backpack_user()->cannot('list member'))
             CRUD::denyAccess(['index']);
         if (backpack_user()->cannot('create member'))
             CRUD::denyAccess(['create']);
@@ -49,6 +49,7 @@ class MemberCrudController extends CrudController
      */
     protected function setupListOperation()
     {
+        CRUD::enableExportButtons();
         CRUD::column('name');
         CRUD::column('mother_name');
         CRUD::column('father_name');
@@ -103,7 +104,7 @@ class MemberCrudController extends CrudController
                     [
                         'name' => 'relationship',
                         'type'        => 'select_from_array',
-                        'options'     => ['Spouse' => 'Spouse', 'Son' => 'Son', 'Daughter'=>'Daughter'],
+                        'options'     => ['Spouse' => 'Spouse', 'Son' => 'Son', 'Daughter' => 'Daughter'],
                         'wrapper' => [
                             'class' => 'form-group col-md-3',
                         ],
